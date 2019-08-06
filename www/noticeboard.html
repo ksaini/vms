@@ -140,8 +140,9 @@ a{
    
    <script>
   function custom(data){
-	  var nlist = document.getElementById("notice");	
+	  var nlist = document.getElementById("notice");		  
 	  var txt = "<ul class='chat' id='chat'>";
+	  
 	  for(var i=0; i < data.length; i++){
 		var id = parseInt(data[i]['id']);
 		txt += "<li id='dt_"+ id +"' class='clearfix text-muted notesArea' >";
@@ -155,6 +156,8 @@ a{
 		
 	}
 	nlist.innerHTML = txt + "</ul>";
+	if(data.length==0)
+		nlist.innerHTML = "<ul class='chat' id='chat'><li class='clearfix text-muted notesArea'>No Notices</li></ul>";
 	localStorage.setItem("notice", nlist.innerHTML);
   }
       
