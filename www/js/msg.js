@@ -59,8 +59,7 @@ function populateMsg(data){
 		var chat = document.getElementById("chat");
 		var msgstr = "";
 		var tmp = "";
-		if(data.length ==0)
-			chat.innerHTML = "<p class='bg-info' style='padding-left:100px;'>No Chat History</p>";
+		
 		
 		for (var i = 0; i < data.length; i++) {
 			 var color ="55C1E7";
